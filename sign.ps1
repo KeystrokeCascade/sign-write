@@ -1,7 +1,3 @@
-# TODO:
-# Command to show multiple pages?
-# cmdlet?
-
 # startup, defines display length
 $length = 40
 
