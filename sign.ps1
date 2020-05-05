@@ -59,14 +59,14 @@ while ($true) {
 		Write-Host "  help                   Display this message.  Aliases: h, ?
   write [-b] [message]   Displays a message on the screen, leave blank to clear screen.  Aliases: w
       -b                 Disables automatic line breaking
-  center [-b] [message]  Displays a centered message on the screen.  Aliases: c
+  centre [-b] [message]  Displays a centred message on the screen.  Aliases: c
       -b                 Disables automatic line breaking
   scroll [-s] [message]  Scrolls a message over the screen, press any key to interrupt.  Aliases: s
       -s [speed]         Speed of scrolling, in milliseconds
   page [-bsc][message]   Displays a message over several 'pages' for longer strings, press any key to interrupt.  Aliases: p
       -b                 Disables automatic line breaking
       -s [speed]         Speed of pages, in milliseconds
-      -c                 Centers the text on each page
+      -c                 Centres the text on each page
   clear                  Clears the terminal.  Aliases: cls
   exit                   Leave the session.  Aliases: quit, q
   
@@ -124,8 +124,8 @@ while ($true) {
 			$port.write(" ")
 		}
 
-	# center
-	} elseif ($cmd -eq "center" -or $cmd -eq "c") {
+	# centre
+	} elseif ($cmd -eq "centre" -or $cmd -eq "c") {
 		
 		# breaks the line at the end of screen
 		# if the character at half the screen isn't a space, non-existent or a -, break it, but don't if it has the -b flag
@@ -158,7 +158,7 @@ while ($true) {
 					break
 				}
 			}
-		# if it has the -b flag, center the second line
+		# if it has the -b flag, centre the second line
 		} elseif ($flag.Contains("b") -and $option.length -gt $length/2) {
 			$str1 = -join $option[0..$halflengthminus1]
 			$str1 = $str1.trim()
@@ -171,7 +171,7 @@ while ($true) {
 			}
 			$option = $str1 + $str2
 		} else {
-			# adds a buffer of spaces to the start of the string to center it
+			# adds a buffer of spaces to the start of the string to centre it
 			$buffer = [Math]::Floor([decimal](($length/2-$option.length)/2))
 			for ($i = 1; $i -le $buffer; $i++) {
 				$option = " " + $option
@@ -316,7 +316,7 @@ while ($true) {
 			$iminus1timeslength = ($i-1)*$length
 			$str = -join $outstr[$iminus1timeslength..$itimeslengthminus1]
 
-			# adds a buffer of spaces to the start of the string to center it
+			# adds a buffer of spaces to the start of the string to centre it
 			if ($flag.Contains("c")) {
 
 				# splits the string (again) to maniuplate it
