@@ -28,7 +28,7 @@ while ($COM -isnot [int] -or $open -ne $true) {
 }
 
 Write-Host "Port opened"
-$port.write("`r")
+$port.write("`f")
 
 # in a constant loop so users come back to root unless they exit
 while ($true) {
