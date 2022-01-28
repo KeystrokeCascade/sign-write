@@ -27,3 +27,5 @@ The in-built help menu:
   scroll -s 400 foo bar
   page -sc 600 foo bar
   ```
+
+Note: This was before I knew the form feed special character (\`f) could be used to both clear the screen and reset the cursor and I'm lazy.
