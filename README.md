@@ -3,9 +3,6 @@ Powershell script for controlling serial POS LED signs, based on and configured 
 
 Assumes a sign with 2 rows and a length of 40 characters in total, character length can be easily changed however reconfiguring for more rows might take a bit more work.
 
-Just run the `sign.ps1` file to run the script.
-
-The in-built help menu:
 ```
   help                   Display this message.  Aliases: h, ?
   write [-b] [message]   Displays a message on the screen, leave blank to clear screen.  Aliases: w
