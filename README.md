@@ -1,5 +1,5 @@
 # Sign Write
-Powershell script for controlling serial POS LED signs, based on and configured for C2202-PD.
+PowerShell script for controlling serial POS LED signs, based on and configured for C2202-PD.
 
 Assumes a sign with 2 rows and a length of 40 characters in total, character length can be easily changed however reconfiguring for more rows might take a bit more work.
 
@@ -19,7 +19,7 @@ Assumes a sign with 2 rows and a length of 40 characters in total, character len
       -c                 Centers the text on each page
   clear                  Clears the terminal.  Aliases: cls
   exit                   Leave the session.  Aliases: quit, q
-  
+
   Examples:
   write foo bar
   w -b foo bar
